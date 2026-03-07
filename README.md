@@ -1,15 +1,15 @@
 # MinecraftConsoles
-
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/jrum7HhegA)
+Modded/Patched by Xgui4
 
 ![Tutorial World](.github/TutorialWorld.png)
 
 ## Introduction
 
 This project contains the source code of Minecraft Legacy Console Edition v1.6.0560.0 (TU19) from https://archive.org/details/minecraft-legacy-console-edition-source-code, with some fixes and improvements applied.
+with further modification by Xgui4 like readding the debug menu and changed the menu screen.
 
 ## Download
-Windows users can download our [Nightly Build](https://github.com/smartcmd/MinecraftConsoles/releases/tag/nightly)! Simply download the `.zip` file and extract it to a folder where you'd like to keep the game. You can set your username in `username.txt` (you'll have to make this file) and add servers to connect to in `servers.txt`
+Windows users can download our [Nightly Build](https://github.com/xgui4/MinecraftConsoles/releases/tag/nightly)! Simply download the `.zip` file and extract it to a folder where you'd like to keep the game. You can set your username in `username.txt` (you'll have to make this file) and add servers to connect to in `servers.txt`
 
 ## Platform Support
 
@@ -18,6 +18,8 @@ Windows users can download our [Nightly Build](https://github.com/smartcmd/Minec
 
 ## Features
 
+- Original MCLCE TU19 game
+- Debug Menu enabled
 - Fixed compilation and execution in both Debug and Release mode on Windows using Visual Studio 2022
 - Added support for keyboard and mouse input
 - Added fullscreen mode support (toggle using F11)
@@ -96,7 +98,7 @@ Minecraft.Client.exe -name Steve -fullscreen
 
 ## Build & Run
 
-1. Install [Visual Studio 2022](https://aka.ms/vs/17/release/vs_community.exe).
+1. Install [Visual Studio 2022](https://aka.ms/vs/17/release/vs_community.exe) or [Visual Studio 2026](https://aka.ms/vs/18/release/vs_community.exe) (not recommended for cmake yet).
 2. Clone the repository.
 3. Open the project by double-clicking `MinecraftConsoles.sln`.
 4. Make sure `Minecraft.Client` is set as the Startup Project.
@@ -105,7 +107,7 @@ Minecraft.Client.exe -name Steve -fullscreen
 ### CMake (Windows x64)
 
 ```powershell
-cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+cmake -S . -B build -G "Visual Studio 17 2022" -A x64 
 cmake --build build --config Debug --target MinecraftClient
 ```
 
@@ -120,4 +122,7 @@ Would you like to contribute to this project? Please read our [Contributor's Gui
 
 ## Star History
 
+Star History chart of the orignal repo : 
 [![Star History Chart](https://api.star-history.com/svg?repos=smartcmd/MinecraftConsoles&type=date&legend=top-left)](https://www.star-history.com/?spm=a2c6h.12873639.article-detail.7.7b9d7fabjNxTRk#smartcmd/MinecraftConsoles&type=date&legend=top-left)
+
+my repo is primarly for myself so i do not include a chart yet as they are not enought stars.

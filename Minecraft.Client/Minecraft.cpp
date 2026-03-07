@@ -1522,7 +1522,6 @@ void Minecraft::run_middle()
 					}
 #endif
 
-#if _DEBUG // ndef _FINAL_BUILD // Disable conflicting debug functionality in release builds
 					if( app.DebugSettingsOn() && app.GetUseDPadForDebug() )
 					{
 						localplayers[i]->ullDpad_last = 0;
@@ -1534,7 +1533,6 @@ void Minecraft::run_middle()
 						if(InputManager.ButtonPressed(i, MINECRAFT_ACTION_DPAD_LEFT))			localplayers[i]->ullButtonsPressed|=1LL<<MINECRAFT_ACTION_SPAWN_CREEPER;
 					}
 					else
-#endif
 					{
 						// Movement on DPAD is stored ulimately into ullDpad_filtered - this ignores any diagonals pressed, instead reporting the last single direction - otherwise
 						// we get loads of accidental diagonal movements
@@ -3651,7 +3649,6 @@ void Minecraft::tick(bool bFirst, bool bUpdateTextures)
 
 		if (player->missTime > 0) player->missTime--;
 
-#ifdef _DEBUG//_MENUS_ENABLED // disable DPad cheats on release builds
 		if(app.DebugSettingsOn())
 		{
 #ifndef __PSVITA__
@@ -3685,8 +3682,6 @@ void Minecraft::tick(bool bFirst, bool bUpdateTextures)
 			}
 #endif // PSVITA
 		}
-#endif
-
 		if((player->ullButtonsPressed&(1LL<<MINECRAFT_ACTION_RENDER_THIRD_PERSON)) && gameMode->isInputAllowed(MINECRAFT_ACTION_RENDER_THIRD_PERSON))
 		{
 			// 4J-PB - changing this to be per player
@@ -4652,7 +4647,7 @@ void Minecraft::startAndConnectTo(const wstring& name, const wstring& sid, const
 		}
 		else
 		{
-			minecraft->user = new User(L"Player" + std::to_wstring(System::currentTimeMillis() % 1000), L"");
+			minecraft->user = new User(L"Steve" + std::to_wstring(System::currentTimeMillis() % 1000), L"");
 		}
 	}
 	//else

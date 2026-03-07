@@ -695,7 +695,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 	wcex.hIcon			= LoadIcon(hInstance, "Minecraft");
 	wcex.hCursor		= LoadCursor(NULL, IDC_ARROW);
 	wcex.hbrBackground	= (HBRUSH)(COLOR_WINDOW+1);
-	wcex.lpszMenuName	= "Minecraft";
+	wcex.lpszMenuName	= "Minecraft : Legacy Console Edition";
 	wcex.lpszClassName	= "MinecraftClass";
 	wcex.hIconSm		= LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_MINECRAFTWINDOWS));
 
@@ -720,7 +720,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	AdjustWindowRect(&wr, WS_OVERLAPPEDWINDOW, FALSE);    // adjust the size
 
 	g_hWnd = CreateWindow(	"MinecraftClass",
-		"Minecraft",
+		"Minecraft : Legacy Console Edition",
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT,
 		0,
@@ -1248,8 +1248,8 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	// If no username, let's fall back
 	if (g_Win64Username[0] == 0)
 	{
-        // Default username will be "Player"
-        strncpy_s(g_Win64Username, sizeof(g_Win64Username), "Player", _TRUNCATE);
+        // Default username will be "Steve"
+        strncpy_s(g_Win64Username, sizeof(g_Win64Username), "Steve", _TRUNCATE);
 	}
 
 	MultiByteToWideChar(CP_ACP, 0, g_Win64Username, -1, g_Win64UsernameW, 17);
@@ -1601,7 +1601,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 			}
 		}
 
-#ifdef _DEBUG_MENUS_ENABLED
+// #ifdef _DEBUG_MENUS_ENABLED
         // F6 Open debug console
         if (g_KBMInput.IsKeyPressed(VK_F6))
         {
@@ -1609,7 +1609,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
         	s_debugConsole = !s_debugConsole;
         	ui.ShowUIDebugConsole(s_debugConsole);
         }
-#endif
+// #endif
 
 		// F11 Toggle fullscreen
 		if (g_KBMInput.IsKeyPressed(VK_F11))
@@ -1653,7 +1653,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 				app.DebugPrintf("***  - APPLYING GAME SETTINGS CHANGE for pad %d\n",i);
 				app.ApplyGameSettingsChanged(i);
 
-#ifdef _DEBUG_MENUS_ENABLED
+// #ifdef _DEBUG_MENUS_ENABLED
 				if(app.DebugSettingsOn())
 				{
 					app.ActionDebugMask(i);
@@ -1663,7 +1663,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 					// force debug mask off
 					app.ActionDebugMask(i,true);
 				}
-#endif
+// #endif
 				// clear the stats first - there could have beena signout and sign back in in the menus
 				// need to clear the player stats - can't assume it'll be done in setlevel - we may not be in the game
 				pMinecraft->stats[ i ]->clear();
@@ -1702,7 +1702,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 		// 4J-PB - Update the trial timer display if we are in the trial version
 		if(!ProfileManager.IsFullVersion())
-		{
+		 {
 			// display the trial timer
 			if(app.GetGameStarted())
 			{
@@ -1714,7 +1714,6 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 				ui.UpdateTrialTimer(ProfileManager.GetPrimaryPad());
 			}
 		}
-		else
 		{
 			// need to turn off the trial timer if it was on , and we've unlocked the full version
 			if(bTrialTimerDisplayed)

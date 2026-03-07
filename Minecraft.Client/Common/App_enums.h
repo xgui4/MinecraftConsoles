@@ -39,7 +39,7 @@ enum eXuiAction
 	eAppAction_ExitWorld,
 	eAppAction_ExitWorldCapturedThumbnail,
 	eAppAction_ExitWorldTrial,
-	//eAppAction_ExitGameFatalLoadError,
+	eAppAction_ExitGameFatalLoadError,
 	eAppAction_Respawn,
 	eAppAction_WaitForRespawnComplete,
 	eAppAction_PrimaryPlayerSignedOut,
@@ -178,8 +178,6 @@ enum eGameSetting
 
 
 };
-
-
 
 enum eGameMode
 {
