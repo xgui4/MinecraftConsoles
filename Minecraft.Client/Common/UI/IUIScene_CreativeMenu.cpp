@@ -550,6 +550,9 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM_AUX(Item::dye_powder_Id,0)		// black (ink sac)
 		ITEM_AUX(Item::dye_powder_Id,2)		// Green
 		ITEM_AUX(Item::dye_powder_Id,3)		// Brown
+        
+		// Mod 
+		ITEM(Tile::rainbowWool)
 
 		// Brewing (TODO)
 		DEF(eCreativeInventory_Brewing)
@@ -563,7 +566,7 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Item::speckledMelon_Id)
 		ITEM(Item::glassBottle_Id)
 		ITEM_AUX(Item::potion_Id,0) // Water bottle
-		//ITEM_AUX(Item::potion_Id,MACRO_MAKEPOTION_AUXVAL(0, 0, MASK_TYPE_AWKWARD)) // Awkward Potion
+		// ITEM_AUX(Item::potion_Id,MACRO_MAKEPOTION_AUXVAL(0, 0, MASK_TYPE_AWKWARD)) // Awkward Potion
 
 
 		DEF(eCreativeInventory_Potions_Basic)

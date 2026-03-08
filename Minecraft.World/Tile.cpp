@@ -222,6 +222,10 @@ Tile *Tile::coalBlock = NULL;
 
 DWORD Tile::tlsIdxShape = TlsAlloc();
 
+// MOD 
+Tile *Tile::rainbowWool = NULL; 
+
+
 Tile::ThreadStorage::ThreadStorage()
 {
 	xx0 = yy0 = zz0 = xx1 = yy1 = zz1 = 0.0;
@@ -442,6 +446,8 @@ void Tile::staticCtor()
 	Tile::clayHardened = (new Tile(172, Material::stone))			->setBaseItemTypeAndMaterial(Item::eBaseItemType_clay,	Item::eMaterial_clay)->setDestroyTime(1.25f)->setExplodeable(7)->setSoundType(SOUND_STONE)->setIconName(L"hardened_clay")->setDescriptionId(IDS_TILE_HARDENED_CLAY)->setUseDescriptionId(IDS_DESC_HARDENED_CLAY);
 	Tile::coalBlock = (new Tile(173, Material::stone))				->setBaseItemTypeAndMaterial(Item::eBaseItemType_block,	Item::eMaterial_coal)->setDestroyTime(5.0f)->setExplodeable(10)->setSoundType(SOUND_STONE)->setIconName(L"coal_block")->setDescriptionId(IDS_TILE_COAL)->setUseDescriptionId(IDS_DESC_COAL_BLOCK);
 
+	// MOD 
+	Tile::rainbowWool = (new ColoredTile(174, Material::cloth))->setBaseItemTypeAndMaterial(Item::eBaseItemType_cloth, Item::eMaterial_cloth)->setDestroyTime(0.8f)->setSoundType(Tile::SOUND_CLOTH)->setIconName(L"wool_rainbow")->setDescriptionId(IDS_TILE_BLOCK_RAINBOW_WOOL)->sendTileData()->setUseDescriptionId(IDS_DESC_BLOCK_RAINBOW_WOOL);
 
 	// Special cases for certain items since they can have different icons
 	Item::items[wool_Id]				= ( new WoolTileItem(Tile::wool_Id- 256) )->setIconName(L"cloth")->setDescriptionId(IDS_TILE_CLOTH)->setUseDescriptionId(IDS_DESC_WOOL);
@@ -471,7 +477,6 @@ void Tile::staticCtor()
 	Item::items[pistonStickyBase_Id]	= ( new PistonTileItem(Tile::pistonStickyBase_Id - 256) )->setDescriptionId(IDS_TILE_PISTON_STICK_BASE)->setUseDescriptionId(IDS_DESC_STICKY_PISTON);
 	Item::items[cobbleWall_Id]			= ( new MultiTextureTileItem(cobbleWall_Id - 256, cobbleWall, (int *)WallTile::COBBLE_NAMES, 2) )->setDescriptionId(IDS_TILE_COBBLESTONE_WALL)->setUseDescriptionId(IDS_DESC_COBBLESTONE_WALL);
 	Item::items[anvil_Id]				= ( new AnvilTileItem(anvil) )->setDescriptionId(IDS_TILE_ANVIL)->setUseDescriptionId(IDS_DESC_ANVIL);
-
 
 	for (int i = 0; i < 256; i++)
 	{

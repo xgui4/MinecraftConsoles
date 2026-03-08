@@ -8810,5 +8810,12 @@ All Ender Chests in a world are linked. Items placed into an Ender Chest are acc
 
 	<data name="IDS_TOOLTIPS_CURE">
 		<value>Cure</value>
-	</data>	
+	</data>
+
+	<data name="IDS_TILE_BLOCK_RAINBOW_WOOL">
+		<value>Raindow Wool Block</value>
+	</data>
+	<data name="IDS_DESC_BLOCK_RAINBOW_WOOL">
+		<value>A rare multicolore wool used for building and storage.</value>
+	</data>
 </root>

@@ -290,7 +290,7 @@ Icon *PreStitchedTextureMap::registerIcon(const wstring &name)
 	{
 #ifndef _CONTENT_PACKAGE
 		app.DebugPrintf("Could not find uv data for icon %ls\n", name.c_str() );
-		__debugbreak();
+		// __debugbreak();
 #endif
 		result = missingPosition;
 	}
@@ -986,5 +986,7 @@ void PreStitchedTextureMap::loadUVs()
 		ADD_ICON(19,	13,	L"glass_pane_top_silver");
 		ADD_ICON(19,	14,	L"glass_pane_top_white");
 		ADD_ICON(19,	15,	L"glass_pane_top_yellow");
+
+		ADD_ICON(20, 0, L"wool_rainbow");
 	}
 }
