@@ -1,4 +1,9 @@
 # MinecraftConsoles
+
+>[!NOTE]
+> This version might be behind the behind the nighlt build due to the difficulty of lfs and the rapid 
+paste developpement of smartcmd's LCE Fork. Once smartcmd will stabilise the update could be more up to date.
+
 Modded/Patched by Xgui4
 
 ![Tutorial World](.github/TutorialWorld.png)
