@@ -19,12 +19,15 @@ Windows users can download our [Nightly Build](https://github.com/xgui4/Minecraf
 ## Platform Support
 
 - **Windows**: Supported for building and running the project
-- **macOS / Linux**: The Windows nightly build may run through Wine or CrossOver based on community reports, but this is unofficial and not currently tested by the maintainers
+- Linux and Android are tested by me (Xgui4) but not offically official yet
+- MacOS you can try CrossOver but me (Xgui4) or the original creator (smartcmd) do not support it. 
 
 ## Features
 
 - Original MCLCE TU19 game
 - Debug Menu enabled
+- Secret itme added in creative mode
+- Xgui4 Exansion Mod added in the code
 - Fixed compilation and execution in both Debug and Release mode on Windows using Visual Studio 2022
 - Added support for keyboard and mouse input
 - Added fullscreen mode support (toggle using F11)

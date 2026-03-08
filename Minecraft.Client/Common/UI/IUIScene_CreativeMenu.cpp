@@ -273,6 +273,7 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Tile::pistonBase_Id)
 		ITEM(Tile::pistonStickyBase_Id)
 		ITEM(Tile::tnt_Id)
+        ITEM(Tile::commandBlock_Id)
 		ITEM(Tile::lever_Id)
 		ITEM(Tile::button_stone_Id)
 		ITEM(Tile::button_wood_Id)
@@ -370,6 +371,9 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM(Item::record_10_Id)
 		ITEM(Item::record_11_Id)
 		ITEM(Item::record_12_Id)
+
+		ITEM(Tile::water)
+        ITEM(Tile::lava)
 
 		BuildFirework(list, FireworksItem::TYPE_SMALL, DyePowderItem::LIGHT_BLUE, 1, true, false);
 		BuildFirework(list, FireworksItem::TYPE_CREEPER, DyePowderItem::GREEN, 2, false, false);
