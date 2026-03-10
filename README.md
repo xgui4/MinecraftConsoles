@@ -1,10 +1,6 @@
 # MinecraftConsoles
 
->[!NOTE]
-> This version might be behind the behind the nighlt build due to the difficulty of lfs and the rapid 
-paste developpement of smartcmd's LCE Fork. Once smartcmd will stabilise the update could be more up to date.
-
-Modded/Patched by Xgui4
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/jrum7HhegA)
 
 ![Tutorial World](.github/TutorialWorld.png)
 
@@ -50,25 +46,6 @@ Basic LAN multiplayer is available on the Windows build
 
 Parts of this feature are based on code from [LCEMP](https://github.com/LCEMP/LCEMP) (thanks!)
 
-### servers.txt
-
-To add a server to your game, create the `servers.txt` file in the same directory as you have `Minecraft.Client.exe`. Inside, follow this format:
-```
-serverip.example.com
-25565
-The name of your server in UI!
-```
-
-For example, here's a valid servers.txt
-```
-1.1.1.1
-25565
-Cloudflare's Very Own LCE Server
-127.0.0.1
-25565
-Localhost Test Crap
-```
-
 ### Launch Arguments
 
 | Argument           | Description                                                                                         |
@@ -110,7 +87,7 @@ Minecraft.Client.exe -name Steve -fullscreen
 2. Clone the repository.
 3. Open the project by double-clicking `MinecraftConsoles.sln`.
 4. Make sure `Minecraft.Client` is set as the Startup Project.
-5. Set the build configuration to **Debug** (Release is also OK but has some bugs) and the target platform to **Windows64**, then build and run.
+5. Set the build configuration to **Debug** (Release is also ok but missing some debug features) and the target platform to **Windows64**, then build and run.
 
 ### CMake (Windows x64)
 
