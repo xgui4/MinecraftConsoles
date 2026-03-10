@@ -1,6 +1,7 @@
 # MinecraftConsoles
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/jrum7HhegA)
+>[!NOTE]
+> This version might be behind the behind the nighlt build due to the the rapid paste developpement of smartcmd's LCE Fork and for the stabilty of the mod. Once smartcmd will stabilise or a modding APi  arrive the update could be more up to date.
 
 ![Tutorial World](.github/TutorialWorld.png)
 
@@ -10,7 +11,7 @@ This project contains the source code of Minecraft Legacy Console Edition v1.6.0
 with further modification by Xgui4 like readding the debug menu and changed the menu screen.
 
 ## Download
-Windows users can download our [Nightly Build](https://github.com/xgui4/MinecraftConsoles/releases/tag/nightly)! Simply download the `.zip` file and extract it to a folder where you'd like to keep the game. You can set your username in `username.txt` (you'll have to make this file) and add servers to connect to in `servers.txt`
+Windows users can download our [Nightly Build](https://github.com/xgui4/MinecraftConsoles/releases/tag/nightly)! or [Debug Nightly Build](https://github.com/xgui4/MinecraftConsoles/releases/tag/debug-nightly) Simply download the `.zip` file and extract it to a folder where you'd like to keep the game. You can set your username in `username.txt` (you'll have to make this file).
 
 ## Platform Support
 
@@ -41,7 +42,7 @@ Basic LAN multiplayer is available on the Windows build
 - Other players on the same LAN can discover the session from the in-game Join Game menu
 - Game connections use TCP port `25565` by default
 - LAN discovery uses UDP port `25566`
-- Add servers to your server list with `servers.txt` (temp solution)
+- Add servers to your server list with the in-game Add Server button (temp)
 - Rename yourself without losing data by keeping your `uid.dat`
 
 Parts of this feature are based on code from [LCEMP](https://github.com/LCEMP/LCEMP) (thanks!)
