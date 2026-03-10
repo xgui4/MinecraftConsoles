@@ -244,7 +244,6 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM_AUX(Tile::stained_glass_pane_Id,13)	// Green
 		ITEM_AUX(Tile::stained_glass_pane_Id,12)	// Brown
 
-#ifndef _CONTENT_PACKAGE
 	DEF(eCreativeInventory_ArtToolsDecorations)
 		if(app.DebugSettingsOn())
 		{
@@ -264,7 +263,6 @@ void IUIScene_CreativeMenu::staticCtor()
 			BuildFirework(list, FireworksItem::TYPE_STAR, DyePowderItem::YELLOW, 1, false, false);
 			BuildFirework(list, FireworksItem::TYPE_BIG, DyePowderItem::WHITE, 1, true, true);
 		}
-#endif
 
 	// Redstone
 	DEF(eCreativeInventory_Redstone)
@@ -359,6 +357,13 @@ void IUIScene_CreativeMenu::staticCtor()
 		ITEM_AUX(Item::spawnEgg_Id, 100 | ((EntityHorse::TYPE_DONKEY + 1) << 12) ); // Donkey
 		ITEM_AUX(Item::spawnEgg_Id, 100 | ((EntityHorse::TYPE_MULE + 1) << 12)); // Mule
 		ITEM_AUX(Item::spawnEgg_Id, 120); // Villager
+        ITEM_AUX(Item::spawnEgg_Id, 100 | ((EntityHorse::TYPE_SKELETON + 1) << 12)); // Skeleton
+        ITEM_AUX(Item::spawnEgg_Id, 100 | ((EntityHorse::TYPE_UNDEAD + 1) << 12));   // Zombie
+        ITEM_AUX(Item::spawnEgg_Id, 98 | ((Ocelot::TYPE_BLACK + 1) << 12));
+        ITEM_AUX(Item::spawnEgg_Id, 98 | ((Ocelot::TYPE_RED + 1) << 12));
+        ITEM_AUX(Item::spawnEgg_Id, 98 | ((Ocelot::TYPE_SIAMESE + 1) << 12));
+        ITEM_AUX(Item::spawnEgg_Id, 52 | (2 << 12)); // Spider-Jockey
+        ITEM_AUX(Item::spawnEgg_Id, 63);             // Enderdragon
 		ITEM(Item::record_01_Id)
 		ITEM(Item::record_02_Id)
 		ITEM(Item::record_03_Id)
@@ -380,20 +385,6 @@ void IUIScene_CreativeMenu::staticCtor()
 		BuildFirework(list, FireworksItem::TYPE_MAX, DyePowderItem::RED, 2, false, false, DyePowderItem::ORANGE);
 		BuildFirework(list, FireworksItem::TYPE_BURST, DyePowderItem::MAGENTA, 3, true, false, DyePowderItem::BLUE);
 		BuildFirework(list, FireworksItem::TYPE_STAR, DyePowderItem::YELLOW, 2, false, true, DyePowderItem::ORANGE);
-
-#ifndef _CONTENT_PACKAGE
-	DEF(eCreativeInventory_ArtToolsMisc)
-		if(app.DebugSettingsOn())
-		{
-			ITEM_AUX(Item::spawnEgg_Id, 100 | ((EntityHorse::TYPE_SKELETON + 1) << 12)); // Skeleton
-			ITEM_AUX(Item::spawnEgg_Id, 100 | ((EntityHorse::TYPE_UNDEAD + 1) << 12)); // Zombie
-			ITEM_AUX(Item::spawnEgg_Id,  98 | ((Ocelot::TYPE_BLACK + 1) << 12));
-			ITEM_AUX(Item::spawnEgg_Id,  98 | ((Ocelot::TYPE_RED + 1) << 12));
-			ITEM_AUX(Item::spawnEgg_Id,  98 | ((Ocelot::TYPE_SIAMESE + 1) << 12));
-			ITEM_AUX(Item::spawnEgg_Id,  52 | (2 << 12)); // Spider-Jockey
-			ITEM_AUX(Item::spawnEgg_Id,  63); // Enderdragon
-		}
-#endif
 
 	// Food
 	DEF(eCreativeInventory_Food)
