@@ -9,6 +9,9 @@ on:
       - '.gitignore'
       - '*.md'
       - '.github/*.md'
+  
+permissions:
+     contents: write
 
 jobs:
   build:
